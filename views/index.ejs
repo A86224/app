@@ -1,0 +1,34 @@
+<%- include('partials/header.ejs') %>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <br>
+    <div class="container">
+
+        <a href="/question"><Button class="btn btn-success">Make a Question</Button></a>
+
+    </div>
+    <br>
+
+    <div class="container">
+        <H1>Frequently Asked Questions:</H1>
+
+        <% question.forEach(question =>{%>
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <h4><%= question.title %></h4>
+                <%= question.createdAt %>
+
+            </div>
+
+            <div class="card-footer">
+                <a href="/question/<%= question.id %>"><button class="btn btn-primary">Open Question</button></a>
+                <a href="/destroy/<%= question.id %>"><button class="btn btn-danger">Delete Question</button></a>
+            </div>
+        </div>
+        <%})%>
+    </div>
+
+</body>
+<%- include('partials/footer.ejs') %>

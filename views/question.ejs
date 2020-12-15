@@ -1,0 +1,27 @@
+<!--header include on EJS-->
+<%- include('partials/header.ejs') %>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <div class="container">
+        <div class="card" id="form-quest">
+            <div class="card-header">
+                <h1>Make Your Question!</h1><br>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/question">
+                    <input type="text" placeholder="title" class="form-control" name="title">
+                    <br>
+                    <textarea placeholder="Write Your Question" class="form-control"
+                        name="question"></textarea>
+                    <br>
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<!--footer include on ejs-->
+<%- include('partials/footer.ejs') %>
