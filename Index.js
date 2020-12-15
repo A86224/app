@@ -1,4 +1,4 @@
-//creating server new
+//creating server
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser"); // req body-parser
